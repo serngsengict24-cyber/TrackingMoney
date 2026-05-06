@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EFEBEB"
+    tools:context=".AddIncome">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#2196F3"
+                app:title="Income "
+                app:titleTextColor="@color/white"
+                app:navigationIcon="@drawable/arrowback"
+                />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:padding="16dp">
+
+                <!-- Card 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardElevation="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/salary"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"/>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+
+            <EditText
+                android:id="@+id/idEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/lavender_border"
+                android:drawablePadding="12dp"
+                android:hint="Enter Id (for Updating and Deleting only) "
+                android:inputType="number"
+                android:padding="14dp"
+                android:textColorHint="#2196F3" />
+
+            <EditText
+                android:id="@+id/incomeEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/lavender_border"
+                android:hint="Enter amount "
+                android:drawablePadding="12dp"
+                android:layout_margin="6dp"
+                android:inputType="number"
+                android:padding="14dp"
+                />
+
+            <EditText
+                android:id="@+id/dateEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/lavender_border"
+                android:layout_margin="6dp"
+                android:hint="yyyy-dd-mm "
+                android:drawablePadding="12dp"
+                android:inputType="text"
+                android:padding="14dp"
+                />
+
+            <EditText
+                android:id="@+id/commentEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/lavender_border"
+                android:layout_margin="6dp"
+                android:hint="Optional"
+                android:drawablePadding="12dp"
+                android:inputType="text"
+                android:padding="14dp"
+                />
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="#1888f2"
+                android:text="Save"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="12dp"
+                />
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="#B6295D"
+                android:padding="12dp"
+                android:text="Delete"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/folderDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_border1"
+                android:padding="16dp"
+                android:src="@drawable/folder"
+                android:layout_gravity="end"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
